@@ -45,7 +45,7 @@ RUN mkdir /etc/nginx/ssl && \
 
 #set up nginx conf file
 RUN rm /etc/nginx/sites-enabled/default && \
-	mv /tmp/ft_server.conf /etc/nginx/site-available/ && \
+	mv /tmp/ft_server.conf /etc/nginx/sites-available/ && \
 	ln -s /etc/nginx/sites-available/ft_server.conf /etc/nginx/sites-enabled/
 
 #set authority
