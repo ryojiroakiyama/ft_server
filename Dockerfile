@@ -10,6 +10,7 @@ RUN apt-get update && apt-get -y upgrade && \
 	php-cgi php-common php-fpm php-pear php-mbstring php-zip php-net-socket php-gd \
 	php-xml-util php-gettext php-mysql php-bcmath \
 	openssl ca-certificates wget
+	#better to refer to the documentation and try to use clean for cleannig cash
 
 #set up database
 RUN service mysql start && \
@@ -51,6 +52,7 @@ RUN rm /etc/nginx/sites-enabled/default && \
 #set authority
 RUN chown -R www-data:www-data /var/www/html && \
 	chmod -R 755 /var/www/html/
+	#better to use chmod for tmp/setup.sh
 
 EXPOSE 80 443
 
